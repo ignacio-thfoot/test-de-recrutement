@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Film;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-   return view('welcome');
+   $films = Film::all();
+   return view('films', [
+      'films' => $films
+   ]);
+});
+
+//search endpoint for autcomplete
+Route::get('/search',function(){
+   $query = Request::get('query');
+   $users = Film::where('name','like','%'.$query.'%')
+   ->orWhere('genre','like','%'.$query.'%')
+   ->get();
+   return response()->json($users);
 });
