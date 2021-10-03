@@ -2108,6 +2108,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2132,16 +2133,6 @@ __webpack_require__.r(__webpack_exports__);
           closeBtn.addEventListener('click', function (event) {
             event.preventDefault();
             document.querySelector(targetID).classList.remove(targetClass);
-            var div = document.querySelector('.' + backdropClass);
-            div.parentNode.removeChild(div);
-          }); // close modal on Bakcdrop Click
-
-          var backdrop = document.querySelector("." + backdropClass);
-          backdrop.addEventListener('click', function (event) {
-            event.preventDefault();
-            document.querySelector(targetID).classList.remove(targetClass);
-            var div = document.querySelector('.' + backdropClass);
-            div.parentNode.removeChild(div);
           });
         }, 100);
       },
@@ -26453,13 +26444,15 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "b--card-a__bd" }, [
                 _c("h3", { staticClass: "b--card-a__bd__title" }, [
-                  _vm._v(
-                    _vm._s(_vm.film.name) + " (" + _vm._s(_vm.film.year) + ")"
-                  )
+                  _vm._v(_vm._s(_vm.film.name))
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "b--card-a__bd__content" }, [
                   _vm._v("Genre: " + _vm._s(_vm.film.genre))
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "b--card-a__bd__content" }, [
+                  _vm._v("Year: " + _vm._s(_vm.film.year))
                 ])
               ]),
               _vm._v(" "),

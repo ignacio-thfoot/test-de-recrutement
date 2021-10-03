@@ -6050,7 +6050,7 @@ pre.code-jquery code {
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
@@ -6058,10 +6058,13 @@ pre.code-jquery code {
   width: 60%;
   background-color: #ffffff;
   padding: 2rem;
+  border-radius: 5px;
+  border: 2px solid rgba(26, 25, 29, 0.4);
 }
 @media all and (max-width: 992px) {
   .b--modal-a {
     width: 80%;
+    padding: 1rem;
   }
 }
 .b--modal-a__btn {

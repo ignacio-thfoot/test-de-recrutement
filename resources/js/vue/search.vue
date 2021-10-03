@@ -27,8 +27,9 @@
                     <img class="b--card-a__media-wrapper__media" :src="getImage(film.image)" alt="">
                 </div>
                 <div class="b--card-a__bd">
-                    <h3 class="b--card-a__bd__title">{{ film.name }} ({{ film.year }})</h3>
+                    <h3 class="b--card-a__bd__title">{{ film.name }}</h3>
                     <p class="b--card-a__bd__content">Genre: {{ film.genre }}</p>
+                    <p class="b--card-a__bd__content">Year: {{ film.year }}</p>
                 </div>
                 <button class="b--modal-a__btn" data-dismiss="modal-1" aria-label="Close">
                     <svg class="b--modal-a__btn__icon apb apb-close" viewBox="0 0 15.81 15.81" enable-background="new 0 0 15.81 15.81" xml:space="preserve">
@@ -72,18 +73,8 @@
                     closeBtn.addEventListener('click', event => {
                         event.preventDefault(); 
                         document.querySelector(targetID).classList.remove(targetClass);
-                        var div = document.querySelector('.' + backdropClass);
-                        div.parentNode.removeChild(div);
                     });
 
-                    // close modal on Bakcdrop Click
-                    let backdrop = document.querySelector("." + backdropClass);
-                    backdrop.addEventListener('click', event => {
-                        event.preventDefault(); 
-                        document.querySelector(targetID).classList.remove(targetClass);
-                        var div = document.querySelector('.' + backdropClass);
-                        div.parentNode.removeChild(div);
-                    });
                 }, 100);
             },
             getImage(image) {

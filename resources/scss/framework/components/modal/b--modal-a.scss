@@ -2,7 +2,7 @@
     opacity: 0;
     visibility: hidden;
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
@@ -10,8 +10,11 @@
     width: 60%;
     background-color: map-get($color-options, f);
     padding: $measure*4;
+    border-radius: 5px;
+    border: 2px solid rgba(map-get($color-options, a), .4);
     @media all and($viewport-type: $tabletp) {
         width: 80%;
+        padding: $measure*2;
     }
     &__btn{
         position: absolute;
