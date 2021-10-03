@@ -111,7 +111,7 @@ button {
 
 select:-moz-focusring {
   color: transparent !important;
-  text-shadow: 0 0 0 #3ca8b0 !important;
+  text-shadow: 0 0 0 #3caffa !important;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -3830,8 +3830,7 @@ pre.code-jquery code {
   font-weight: 300;
   line-height: 1.27;
   letter-spacing: 1.15px;
-  font-size: 1.375rem;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   /*this font does not have responsive option */
 }
 
@@ -3866,7 +3865,7 @@ pre.code-jquery code {
 }
 
 .f--background-d {
-  background-color: #3ca8b0;
+  background-color: #3caffa;
 }
 
 .f--background-e {
@@ -3887,7 +3886,7 @@ pre.code-jquery code {
 }
 
 .f--color-d {
-  color: #3ca8b0;
+  color: #3caffa;
 }
 
 .f--color-e {
@@ -4930,7 +4929,7 @@ pre.code-jquery code {
   padding: 0.4545454545rem;
 }
 .b--btn-a:hover, .b--btn-a:focus {
-  background: #3ca8b0;
+  background: #3caffa;
 }
 .b--btn-a__loader {
   position: absolute;
@@ -5047,8 +5046,7 @@ pre.code-jquery code {
   font-weight: 300;
   line-height: 1.27;
   letter-spacing: 1.15px;
-  font-size: 1.375rem;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   /*this font does not have responsive option */
 }
 .b--card-g__date {
@@ -5059,6 +5057,72 @@ pre.code-jquery code {
   font-size: 1rem;
   /*this font does not have responsive option */
   color: #49c5f3;
+}
+
+.b--card-a {
+  display: block;
+  text-decoration: none;
+  padding: 4rem;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.b--card-a__media-wrapper {
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 1px;
+  overflow: hidden;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .b--card-a__media-wrapper {
+    padding-top: 0;
+  }
+}
+.b--card-a__media-wrapper__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .b--card-a__media-wrapper__media {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: auto;
+  }
+}
+.b--card-a__bd__title {
+  margin-bottom: 1rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.27px;
+  line-height: 1.41;
+  font-size: 1.375rem;
+  color: #1a191d;
+}
+@media all and (max-width: 992px) {
+  .b--card-a__bd__title {
+    font-size: 1.25rem;
+    letter-spacing: 0.74px;
+    line-height: 1.14;
+  }
+}
+.b--card-a__bd__content {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  line-height: 1.35;
+  letter-spacing: 0.26px;
+  font-size: 1rem;
+  /*this font does not have responsive option */
+  color: #1a191d;
 }
 
 .b--card-h {
@@ -5144,7 +5208,7 @@ pre.code-jquery code {
   padding: 0.4545454545rem;
 }
 .b--btn-a:hover, .b--btn-a:focus {
-  background: #3ca8b0;
+  background: #3caffa;
 }
 .b--btn-a__loader {
   position: absolute;
@@ -5261,22 +5325,36 @@ pre.code-jquery code {
 }
 
 .b--link-a {
-  color: #49c5f3;
+  color: #1a191d;
   opacity: 1;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 .b--link-a:hover, .b--link-a:focus {
   opacity: 0.8;
-  color: #f00000;
+  color: gba(#1a191d, 0.7);
+  text-decoration: underline;
 }
 .b--link-a--second {
-  color: #3ca8b0;
+  color: #1a191d;
   opacity: 1;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 .b--link-a--second:hover, .b--link-a--second:focus {
   opacity: 0.8;
-  color: #78f2c5;
+  color: gba(#1a191d, 0.7);
+  text-decoration: underline;
+}
+
+.b--link-b {
+  display: inline-block;
+  text-decoration: none;
+  color: #3caffa;
+  transition: all 0.3s ease-in-out;
+}
+.b--link-b:hover, .b--link-b:focus {
+  text-decoration: underline;
 }
 
 .tns-outer {
@@ -5442,13 +5520,15 @@ pre.code-jquery code {
   color: #1a191d;
   opacity: 1;
   transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 .b--slider-a__controls__arrow__icon path {
   fill: #49c5f3;
 }
 .b--slider-a__controls__arrow:hover {
   opacity: 0.8;
-  color: #49c5f3;
+  color: gba(#49c5f3, 0.7);
+  text-decoration: underline;
 }
 .b--slider-a__progress {
   position: absolute;
@@ -5518,7 +5598,7 @@ pre.code-jquery code {
   font-size: 0.75rem;
   /*this font does not have responsive option */
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(73, 197, 243, 0.2);
+  border: 1px solid rgba(26, 25, 29, 0.2);
   width: 100%;
   color: rgba(26, 25, 29, 0.5);
   border-radius: 10px;
@@ -5673,28 +5753,28 @@ pre.code-jquery code {
   }
 }
 .b--form-input-icon-a__item:not(:-moz-placeholder-shown) {
-  color: #3ca8b0;
+  color: #3caffa;
 }
 .b--form-input-icon-a__item:not(:-ms-input-placeholder) {
-  color: #3ca8b0;
+  color: #3caffa;
 }
 .b--form-input-icon-a__item:focus, .b--form-input-icon-a__item:not(:placeholder-shown) {
-  color: #3ca8b0;
+  color: #3caffa;
 }
 .b--form-input-icon-a__item:focus::-moz-placeholder, .b--form-input-icon-a__item:not(:placeholder-shown)::-moz-placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-input-icon-a__item:focus:-ms-input-placeholder, .b--form-input-icon-a__item:not(:placeholder-shown):-ms-input-placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-input-icon-a__item:not(:-moz-placeholder-shown)::placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-input-icon-a__item:not(:-ms-input-placeholder)::placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-input-icon-a__item:focus::placeholder, .b--form-input-icon-a__item:not(:placeholder-shown)::placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-input-icon-a__artwork {
   width: 1em;
@@ -5706,7 +5786,7 @@ pre.code-jquery code {
   cursor: pointer;
 }
 .b--form-input-icon-a__artwork path {
-  fill: #3ca8b0;
+  fill: #3caffa;
 }
 .b--form-input-icon-a--error input {
   border: 1px solid #f00000;
@@ -5783,16 +5863,16 @@ pre.code-jquery code {
   }
 }
 .b--form-select-a__item:focus {
-  color: #3ca8b0;
+  color: #3caffa;
 }
 .b--form-select-a__item:focus::-moz-placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-select-a__item:focus:-ms-input-placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-select-a__item:focus::placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-select-a__artwork {
   width: 1em;
@@ -5804,7 +5884,7 @@ pre.code-jquery code {
   cursor: pointer;
 }
 .b--form-select-a__artwork path {
-  fill: #3ca8b0;
+  fill: #3caffa;
 }
 .b--form-select-a--error select {
   border: 1px solid #f00000;
@@ -5880,28 +5960,28 @@ pre.code-jquery code {
   }
 }
 .b--form-textarea-a__item:not(:-moz-placeholder-shown) {
-  color: #3ca8b0;
+  color: #3caffa;
 }
 .b--form-textarea-a__item:not(:-ms-input-placeholder) {
-  color: #3ca8b0;
+  color: #3caffa;
 }
 .b--form-textarea-a__item:focus, .b--form-textarea-a__item:not(:placeholder-shown) {
-  color: #3ca8b0;
+  color: #3caffa;
 }
 .b--form-textarea-a__item:focus::-moz-placeholder, .b--form-textarea-a__item:not(:placeholder-shown)::-moz-placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-textarea-a__item:focus:-ms-input-placeholder, .b--form-textarea-a__item:not(:placeholder-shown):-ms-input-placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-textarea-a__item:not(:-moz-placeholder-shown)::placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-textarea-a__item:not(:-ms-input-placeholder)::placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-textarea-a__item:focus::placeholder, .b--form-textarea-a__item:not(:placeholder-shown)::placeholder {
-  color: rgba(60, 168, 176, 0.5);
+  color: rgba(60, 175, 250, 0.5);
 }
 .b--form-textarea-a--error textarea {
   border: 1px solid #f00000;
@@ -5964,4 +6044,102 @@ pre.code-jquery code {
 
 .b--vlist-a__list-item:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.b--modal-a {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  width: 60%;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+@media all and (max-width: 992px) {
+  .b--modal-a {
+    width: 80%;
+  }
+}
+.b--modal-a__btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: #1a191d;
+}
+.b--modal-a__btn__icon {
+  color: #1a191d;
+  height: 1rem;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .b--modal-a__btn__icon {
+    width: 1rem;
+  }
+}
+.b--modal-a__btn__icon path {
+  fill: #1a191d;
+}
+.b--modal-a--is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.b--modal-backdrop-a {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(26, 25, 29, 0.7);
+}
+
+.b--suggestions-a {
+  position: absolute;
+  width: 100%;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(26, 25, 29, 0.2);
+}
+.b--suggestions-a__title {
+  font-family: "Hero New", sans-serif;
+  font-weight: 300;
+  line-height: 1.27;
+  letter-spacing: 1.15px;
+  font-size: 0.8rem;
+  /*this font does not have responsive option */
+  color: rgba(26, 25, 29, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.b--results-a {
+  margin-top: 2rem;
+}
+.b--results-a__title {
+  font-family: "Hero New", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2.94px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 3.125rem;
+  color: #1a191d;
+  margin-bottom: 0.5rem;
+}
+@media all and (max-width: 1200px) {
+  .b--results-a__title {
+    font-size: 2.25rem;
+    letter-spacing: 2.02px;
+  }
+}
+@media all and (max-width: 600px) {
+  .b--results-a__title {
+    font-size: 1.75rem;
+    letter-spacing: 1.77px;
+  }
 }

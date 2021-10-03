@@ -26,11 +26,13 @@
 @import "./../framework/components/collapse/b--collapse-a.scss";
 @import "./../framework/components/collapse/b--collapse-b.scss";
 @import "./../framework/components/card/b--card-g.scss";
+@import "./../framework/components/card/b--card-a.scss";
 @import "./../framework/components/card/b--card-h.scss";
 @import "./../framework/components/btn/b--btn-a.scss";
 @import "./../framework/components/cta/b--cta-a.scss";
 
 @import "./../framework/components/link/b--link-a.scss";
+@import "./../framework/components/link/b--link-b.scss";
 
 // slider
 @import './../framework/components/slider/tiny-slider.scss';
@@ -54,3 +56,13 @@
 @import "./../framework/components/list-horizontal/b--hlist-a"; //approved
 @import "./../framework/components/list-vertical/b--vlist-a"; //approved
 // block list - end
+
+//block modal - start
+@import "./../framework/components/modal/b--modal-a";
+//block modal - end
+
+// suggestions
+@import './../framework/components/suggestions/b--suggestions-a.scss';
+
+// results
+@import './../framework/components/results/b--results-a.scss';

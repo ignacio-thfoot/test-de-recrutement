@@ -8,8 +8,11 @@
     z-index: 1000;
     transition: all $time-a ease-in-out;
     width: 60%;
-    background-color: map-get($color-options, e);
+    background-color: map-get($color-options, f);
     padding: $measure*4;
+    @media all and($viewport-type: $tabletp) {
+        width: 80%;
+    }
     &__btn{
         position: absolute;
         top: $measure*4;

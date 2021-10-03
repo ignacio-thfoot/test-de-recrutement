@@ -4,7 +4,7 @@
         @include make-generic-input(
             $colortext: a,
             $colorbg: i, 
-            $colorborder: b,
+            $colorborder: a,
             $padding: $measure*1.5 $measure*2,
             $fontSize:1rem );
         &:focus,  &:not(:placeholder-shown){

@@ -2,11 +2,13 @@
     color: map-get($color-options, $colortext);
     opacity: 1;
     transition: all $time-a ease-in-out;
+    text-decoration: none;
 }
 
 @mixin make-link-a-interaction($colortext){
     opacity: 0.8;
-    color: map-get($color-options, $colortext);
+    color: gba(map-get($color-options, $colortext), .7);
+    text-decoration: underline;
 }
 
 @mixin make-link-b($colortext) {

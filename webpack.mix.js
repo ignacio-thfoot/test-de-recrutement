@@ -14,11 +14,11 @@ require('laravel-mix-serve');
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.setPublicPath('./public');
-del('public/css/*.css');
-del('public/js/*.js');
-mix.js('resources/js/app.js', 'public/js').vue();
-mix.sass('resources/scss/entries/app.scss', 'public/css');
+mix.setPublicPath('./dist');
+del('dist/css/*.css');
+del('dist/js/*.js');
+mix.js('resources/js/app.js', 'dist/js').vue();
+mix.sass('resources/scss/entries/app.scss', 'dist/css');
 
 mix.browserSync({
     'port': 8000,

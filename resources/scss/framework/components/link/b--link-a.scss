@@ -1,13 +1,13 @@
  
 .b--link-a{
-    @include make-link-a($colortext: b);
+    @include make-link-a($colortext: a);
     &:hover,&:focus{
-        @include make-link-a-interaction($colortext: c);
+        @include make-link-a-interaction($colortext: a);
     }
     &--second{
-        @include make-link-a($colortext: d);
+        @include make-link-a($colortext: a);
         &:hover,&:focus{
-            @include make-link-a-interaction($colortext: e);
+            @include make-link-a-interaction($colortext: a);
         }
     }
 }

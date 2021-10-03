@@ -23,10 +23,21 @@ Route::get('/', function () {
 });
 
 //search endpoint for autcomplete
+Route::get('/autocomplete',function(){
+   $query = Request::get('query');
+   $resultsName = Film::where('name','like','%'.$query.'%')->get()->toArray();
+   $resultsGenre = Film::where('genre','like','%'.$query.'%')->get()->toArray();
+   
+   return response()->json(array_merge(array_column($resultsName, 'name'), array_column($resultsGenre, 'genre')));
+   
+});
+
+//search endpoint for autcomplete
 Route::get('/search',function(){
    $query = Request::get('query');
-   $users = Film::where('name','like','%'.$query.'%')
+   $films = Film::where('name','like','%'.$query.'%')
    ->orWhere('genre','like','%'.$query.'%')
    ->get();
-   return response()->json($users);
+   
+   return response()->json($films);
 });

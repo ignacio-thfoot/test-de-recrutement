@@ -1,9 +1,8 @@
 require('./bootstrap');
 
 import Vue from "vue";
-import searchVue from './vue/autoComplete.vue'; //html for the Search functionality
+import searchVue from './vue/search.vue';
 import Blazy from 'blazy';
-import Modal from './../js/ds/Modal';
 
 class FilmSearch {
     constructor() {
@@ -11,16 +10,28 @@ class FilmSearch {
     }
 
     init() {
-        new Modal();
+        document.addEventListener( "click", this.events );
         new Blazy({ 
             selector: '.b--lazy-a',
             successClass: 'b--lazy-a--fade-in',
         });
         new Vue({
-            el: 'autocomplete',
+            el: 'search',
             render: h => h(searchVue),
         });
-                
+    }
+
+    events(event){
+        var element = event.target;
+
+        if(element.getAttribute('data-ds-element') == 'modal'){
+
+        
+            event.preventDefault();
+    
+            
+
+        }
     }
 }
 
