@@ -8,7 +8,7 @@
     z-index: 1000;
     transition: all $time-a ease-in-out;
     width: 50%;
-    height: 85%;
+    height: auto;
     background-color: map-get($color-options, f);
     padding: $measure*4;
     border-radius: 5px;

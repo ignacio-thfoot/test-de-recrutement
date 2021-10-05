@@ -3,11 +3,11 @@ const del = require('del');
 require('laravel-mix-serve');
 
 
-mix.setPublicPath('./public');
-del('public/css/*.css');
-del('public/js/*.js');
-mix.js('resources/js/app.js', 'public/js').vue();
-mix.sass('resources/scss/entries/app.scss', 'public/css');
+mix.setPublicPath('./dist');
+del('dist/css/*.css');
+del('dist/js/*.js');
+mix.js('resources/js/app.js', 'dist/js').vue();
+mix.sass('resources/scss/entries/app.scss', 'dist/css');
 
 mix.browserSync({
     'port': 8000,
