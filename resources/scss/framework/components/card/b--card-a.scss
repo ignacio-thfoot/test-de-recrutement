@@ -19,7 +19,14 @@
     }
     &__content {
       @include make-font-e(300);
+      font-size: 12px;
       color: map-get($color-options, a);
+      &:not(:last-child) {
+        margin-bottom: $measure;
+      }
+      &__hd {
+        font-weight: bold;
+      }
     }
   }
 }

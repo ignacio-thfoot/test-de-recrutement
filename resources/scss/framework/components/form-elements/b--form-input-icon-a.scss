@@ -4,12 +4,12 @@
         @include make-generic-input(
             $colortext: a,
             $colorbg: i, 
-            $colorborder: b,
+            $colorborder: a,
             $padding: $measure*1.5 $measure*2,
             $fontSize:1rem );
         
         &:focus,  &:not(:placeholder-shown){
-            @include make-generic-input-interaction($colortext: d);
+            @include make-generic-input-interaction($colortext: a);
         }
     }
     &__artwork{
@@ -21,7 +21,7 @@
         transform: translate(-16px,-50%);
         cursor: pointer;
         path{
-            fill: map-get($color-options, d);
+            fill: map-get($color-options, a);
         } 
     }
     

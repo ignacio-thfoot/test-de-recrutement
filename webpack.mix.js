@@ -1,8 +1,4 @@
 const mix = require('laravel-mix');
-const del = require('del');
-require('laravel-mix-serve');
-
-
 
 /*
  |--------------------------------------------------------------------------
@@ -10,25 +6,11 @@ require('laravel-mix-serve');
  |--------------------------------------------------------------------------
  |
  | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel applications. By default, we are compiling the CSS
+ | for your Laravel application. By default, we are compiling the Sass
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.setPublicPath('./dist');
-del('dist/css/*.css');
-del('dist/js/*.js');
-mix.js('resources/js/app.js', 'dist/js').vue();
-mix.sass('resources/scss/entries/app.scss', 'dist/css');
 
-mix.browserSync({
-    'port': 8000,
-	files: [
-		'resources/views',
-		'resources/assets',
-		'app',
-        'resources/css',
-        'resources/js'
-	],
-});
-
-mix.serve();
+mix.js('resources/js/app.js', 'public/js')
+    .vue()
+    .sass('resources/sass/app.scss', 'public/css');

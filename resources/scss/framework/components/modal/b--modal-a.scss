@@ -2,16 +2,18 @@
     opacity: 0;
     visibility: hidden;
     position: fixed;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
     transition: all $time-a ease-in-out;
-    width: 60%;
+    width: 50%;
+    height: 85%;
     background-color: map-get($color-options, f);
     padding: $measure*4;
     border-radius: 5px;
     border: 2px solid rgba(map-get($color-options, a), .4);
+    overflow: hidden;
     @media all and($viewport-type: $tabletp) {
         width: 80%;
         padding: $measure*2;

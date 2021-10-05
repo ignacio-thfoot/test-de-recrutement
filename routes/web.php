@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 use App\Models\Film;
 
 /*
@@ -41,3 +42,5 @@ Route::get('/search',function(){
    
    return response()->json($films);
 });
+
+Auth::routes();

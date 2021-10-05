@@ -10,8 +10,6 @@ class FilmsController extends Controller
     {
         $films = Film::all();
 
-        dd($customers);
-
         return view('films', [
             'films' => $films
         ]);
