@@ -29,7 +29,7 @@ Route::get('/autocomplete',function(){
    $resultsName = Film::where('name','like','%'.$query.'%')->get()->toArray();
    $resultsGenre = Film::where('genre','like','%'.$query.'%')->get()->toArray();
    
-   return response()->json(array_merge(array_column($resultsName, 'name'), array_column($resultsGenre, 'genre')));
+   return response()->json(array_merge(array_unique(array_column($resultsName, 'name')), array_unique(array_column($resultsGenre, 'genre'))));
    
 });
 
