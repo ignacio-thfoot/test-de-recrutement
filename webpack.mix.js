@@ -20,4 +20,4 @@ mix.browserSync({
 	],
 });
 
-mix.serve(); 
+mix.serve();
